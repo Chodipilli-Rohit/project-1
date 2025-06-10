@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\begin{document}
+
+% Defining the title and author
+\title{Web Application Vulnerability Scanner Project Report}
+\author{Project Team}
+\date{June 10, 2025}
+\maketitle
+
+% Abstract section
+\section*{Abstract}
+This project involves the development of a web application vulnerability scanner designed to identify common security vulnerabilities such as Cross-Site Scripting (XSS), SQL Injection (SQLi), and Cross-Site Request Forgery (CSRF). The scanner leverages Python libraries to crawl web pages, test for vulnerabilities, and present results through a user-friendly Flask-based web interface. The tool aligns with the OWASP Top 10 checklist to ensure comprehensive vulnerability detection and provides detailed logs for analysis.
+
+% Introduction section
+\section{Introduction}
+Web applications are critical components of modern digital infrastructure, yet they are often targeted by attackers exploiting vulnerabilities like XSS, SQLi, and CSRF. This project aims to build a lightweight, automated scanner to detect these vulnerabilities, enabling developers and security professionals to identify and mitigate risks. The scanner crawls target websites, injects test payloads, and analyzes responses to detect potential security flaws. A Flask-based web interface allows users to initiate scans and view detailed reports, which are also logged for further analysis.
+
+% Tools Used section
+\section{Tools Used}
+\begin{itemize}
+    \item \textbf{Python}: The core programming language for implementing the scanner logic.
+    \item \textbf{Requests}: Used for making HTTP requests to crawl and test web pages.
+    \item \textbf{BeautifulSoup}: Employed for parsing HTML and extracting forms and URLs.
+    \item \textbf{Flask}: Provides the web interface for user interaction and result display.
+    \item \textbf{OWASP Top 10 Checklist}: Guides the selection of vulnerabilities to test, ensuring industry-standard coverage.
+    \item \textbf{Logging}: Python's logging module is used to record scan results and vulnerabilities.
+\end{itemize}
+
+% Steps Involved section
+\section{Steps Involved in Building the Project}
+\begin{enumerate}
+    \item \textbf{Project Setup}: Installed necessary Python libraries (requests, BeautifulSoup, Flask) and set up a Flask application with HTML templates for the user interface.
+    \item \textbf{Crawler Development}: Implemented a crawler using requests and BeautifulSoup to identify forms, input fields, and linked URLs on a target website.
+    \item \textbf{Vulnerability Testing}: Developed functions to test for XSS, SQLi, and CSRF by injecting payloads and analyzing responses. XSS tests check for payload reflection, SQLi tests look for error patterns, and CSRF tests verify token presence.
+    \item \textbf{Result Logging}: Configured logging to record vulnerabilities with details such as type, payload, URL, severity, and evidence.
+    \item \textbf{Web Interface}: Built a Flask-based UI with Tailwind CSS for styling, allowing users to input URLs and view scan results in a tabular format.
+    \item \textbf{Testing and Refinement}: Tested the scanner on sample websites, refined payload detection logic, and ensured accurate reporting.
+\end{enumerate}
+
+% Conclusion section
+\section{Conclusion}
+The web application vulnerability scanner successfully detects common vulnerabilities like XSS, SQLi, and CSRF, providing a valuable tool for web developers and security professionals. By automating the scanning process and presenting results through an intuitive interface, the tool simplifies the identification of security flaws. Future enhancements could include support for additional vulnerabilities, improved crawling efficiency, and integration with external security APIs for real-time threat intelligence.
+
+\end{document}
