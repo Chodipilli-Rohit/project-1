@@ -1,0 +1,6 @@
+Install dependencies: pip install requests beautifulsoup4 flask.
+Place scanner.py, index.html, and results.html in the same directory, with index.html and results.html in a templates folder.
+Run scanner.py using python scanner.py.
+Access the web interface at http://localhost:5000, enter a target URL, and view results.
+The scan results are logged in scan_report.log.
+Compile report.tex using latexmk -pdf report.tex to generate the PDF report.
